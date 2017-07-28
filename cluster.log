@@ -1,0 +1,272 @@
+2017-07-28 15:25:53,210 - utils - INFO - Testing with n=10, l=100
+2017-07-28 15:28:42,995 - utils - INFO - PREPARING TIME SERIES
+2017-07-28 15:28:42,995 - utils - INFO - Loading data from: test_ts_data.pkl
+2017-07-28 15:28:42,996 - utils - INFO - Smoothing each time series with w==10
+2017-07-28 15:29:06,951 - utils - INFO - PREPARING TIME SERIES
+2017-07-28 15:29:06,951 - utils - INFO - Loading data from: test_ts_data.pkl
+2017-07-28 15:29:06,952 - utils - INFO - Smoothing each time series with w==10
+2017-07-28 15:29:06,952 - utils - INFO - Downsampling at a ratio of 1
+2017-07-28 15:29:06,952 - utils - INFO - Saving processed time series data
+2017-07-28 15:30:29,580 - utils - INFO - PREPARING TIME SERIES
+2017-07-28 15:30:29,580 - utils - INFO - Loading data from: test_ts_data.pkl
+2017-07-28 15:30:29,580 - utils - INFO - Smoothing each time series with w==10
+2017-07-28 15:30:29,580 - utils - INFO - Downsampling at a ratio of 1
+2017-07-28 15:30:29,580 - utils - INFO - Saving processed time series data
+2017-07-28 15:30:48,372 - utils - INFO - PREPARING TIME SERIES
+2017-07-28 15:30:48,372 - utils - INFO - Loading data from: test_ts_data.pkl
+2017-07-28 15:30:48,372 - utils - INFO - Smoothing each time series with w==10
+2017-07-28 15:30:48,376 - utils - INFO - Downsampling at a ratio of 1
+2017-07-28 15:30:48,376 - utils - INFO - Saving processed time series data
+2017-07-28 15:30:54,787 - utils - INFO - PREPARING TIME SERIES
+2017-07-28 15:30:54,787 - utils - INFO - Loading data from: test_ts_data.pkl
+2017-07-28 15:30:54,788 - utils - INFO - Smoothing each time series with w==10
+2017-07-28 15:30:54,789 - utils - INFO - Downsampling at a ratio of 1
+2017-07-28 15:30:54,789 - utils - INFO - Saving processed time series data
+2017-07-28 15:31:02,142 - utils - INFO - PREPARING TIME SERIES
+2017-07-28 15:31:02,142 - utils - INFO - Loading data from: test_ts_data.pkl
+2017-07-28 15:31:02,142 - utils - INFO - Smoothing each time series with w==1
+2017-07-28 15:31:02,142 - utils - INFO - Downsampling at a ratio of 1
+2017-07-28 15:31:02,142 - utils - INFO - Saving processed time series data
+2017-07-28 15:31:07,840 - utils - INFO - PREPARING TIME SERIES
+2017-07-28 15:31:07,841 - utils - INFO - Loading data from: test_ts_data.pkl
+2017-07-28 15:31:07,841 - utils - INFO - Smoothing each time series with w==1
+2017-07-28 15:31:07,841 - utils - INFO - Downsampling at a ratio of 2
+2017-07-28 15:31:07,841 - utils - INFO - Saving processed time series data
+2017-07-28 15:31:25,050 - utils - INFO - PREPARING TIME SERIES
+2017-07-28 15:31:25,050 - utils - INFO - Loading data from: test_ts_data.pkl
+2017-07-28 15:31:25,051 - utils - INFO - Smoothing each time series with w==1
+2017-07-28 15:31:25,051 - utils - INFO - Downsampling at a ratio of 2
+2017-07-28 15:31:25,051 - utils - INFO - Saving processed time series data of shape: (10, 50)
+2017-07-28 15:34:24,546 - utils - INFO - Trying to load prepared time series data
+2017-07-28 15:34:24,548 - utils - INFO - COMPUTING DTW DISTANCE MATRIX
+2017-07-28 15:34:24,582 - utils - INFO - Saving DTW-based distance matrix
+2017-07-28 15:43:32,303 - utils - INFO - PREPARING TIME SERIES
+2017-07-28 15:43:32,304 - utils - INFO - Loading data from: test_ts_data.pkl
+2017-07-28 15:43:32,304 - utils - INFO - Smoothing each time series with w==10
+2017-07-28 15:43:32,306 - utils - INFO - Downsampling at a ratio of 1
+2017-07-28 15:43:32,306 - utils - INFO - Processed time series data has shape: (10, 100)
+2017-07-28 15:43:32,306 - utils - INFO - Saving processed time series data
+2017-07-28 15:43:43,277 - utils - INFO - Trying to load time series data
+2017-07-28 15:43:43,277 - utils - INFO - COMPUTING DTW DISTANCE MATRIX
+2017-07-28 15:43:43,313 - utils - INFO - Saving DTW-based distance matrix
+2017-07-28 15:56:15,341 - utils - INFO - Trying to load time series data
+2017-07-28 15:56:15,343 - utils - INFO - Trying to load DTW-based distance matrix
+2017-07-28 15:56:15,343 - utils - INFO - CLUSTERING TIME SERIES
+2017-07-28 15:56:15,344 - utils - INFO - K-medoids clustering: k=2, it=100
+2017-07-28 15:56:31,827 - utils - INFO - Trying to load time series data
+2017-07-28 15:56:31,827 - utils - INFO - Trying to load DTW-based distance matrix
+2017-07-28 15:56:31,827 - utils - INFO - CLUSTERING TIME SERIES
+2017-07-28 15:56:31,827 - utils - INFO - K-medoids clustering: k=2, it=100
+2017-07-28 15:56:47,485 - utils - INFO - Trying to load time series data
+2017-07-28 15:56:47,486 - utils - INFO - Trying to load DTW-based distance matrix
+2017-07-28 15:56:47,486 - utils - INFO - CLUSTERING TIME SERIES
+2017-07-28 15:56:47,486 - utils - INFO - K-medoids clustering: k=2, it=100
+2017-07-28 15:57:21,605 - utils - INFO - Trying to load time series data
+2017-07-28 15:57:21,605 - utils - INFO - Trying to load DTW-based distance matrix
+2017-07-28 15:57:21,605 - utils - INFO - CLUSTERING TIME SERIES
+2017-07-28 15:57:21,605 - utils - INFO - K-medoids clustering: k=2, it=100
+2017-07-28 15:57:47,569 - utils - INFO - Trying to load time series data
+2017-07-28 15:57:47,570 - utils - INFO - Trying to load DTW-based distance matrix
+2017-07-28 15:57:47,571 - utils - INFO - CLUSTERING TIME SERIES
+2017-07-28 15:57:47,571 - utils - INFO - K-medoids clustering: k=2, it=100
+2017-07-28 15:57:47,573 - utils - INFO - Saving centroids, assignments, figure
+2017-07-28 15:57:47,894 - utils - INFO - Centroid 0: 5 series
+2017-07-28 15:57:47,894 - utils - INFO - Centroid 1: 5 series
+2017-07-28 15:57:47,894 - utils - INFO - CLUSTERING TIME SERIES
+2017-07-28 15:57:47,894 - utils - INFO - K-medoids clustering: k=3, it=100
+2017-07-28 15:57:47,895 - utils - INFO - Saving centroids, assignments, figure
+2017-07-28 15:57:48,154 - utils - INFO - Centroid 0: 5 series
+2017-07-28 15:57:48,155 - utils - INFO - Centroid 1: 4 series
+2017-07-28 15:57:48,155 - utils - INFO - Centroid 2: 1 series
+2017-07-28 15:57:48,155 - utils - INFO - CLUSTERING TIME SERIES
+2017-07-28 15:57:48,155 - utils - INFO - K-medoids clustering: k=4, it=100
+2017-07-28 15:57:48,156 - utils - INFO - Saving centroids, assignments, figure
+2017-07-28 15:57:48,422 - utils - INFO - Centroid 0: 1 series
+2017-07-28 15:57:48,422 - utils - INFO - Centroid 1: 4 series
+2017-07-28 15:57:48,422 - utils - INFO - Centroid 2: 4 series
+2017-07-28 15:57:48,423 - utils - INFO - Centroid 3: 1 series
+2017-07-28 16:01:13,242 - utils - INFO - Trying to load time series data
+2017-07-28 16:01:13,243 - utils - INFO - Trying to load DTW-based distance matrix
+2017-07-28 16:01:13,243 - utils - INFO - CLUSTERING TIME SERIES
+2017-07-28 16:01:13,244 - utils - INFO - K-medoids clustering: k=2, it=100
+2017-07-28 16:01:13,244 - utils - INFO - Saving centroids, assignments, figure
+2017-07-28 16:01:13,556 - utils - INFO - Centroid 0: 5 series
+2017-07-28 16:01:13,556 - utils - INFO - Centroid 1: 5 series
+2017-07-28 16:01:13,557 - utils - INFO - CLUSTERING TIME SERIES
+2017-07-28 16:01:13,557 - utils - INFO - K-medoids clustering: k=3, it=100
+2017-07-28 16:01:13,557 - utils - INFO - Saving centroids, assignments, figure
+2017-07-28 16:01:13,856 - utils - INFO - Centroid 0: 5 series
+2017-07-28 16:01:13,856 - utils - INFO - Centroid 1: 4 series
+2017-07-28 16:01:13,857 - utils - INFO - Centroid 2: 1 series
+2017-07-28 16:01:13,857 - utils - INFO - CLUSTERING TIME SERIES
+2017-07-28 16:01:13,857 - utils - INFO - K-medoids clustering: k=4, it=100
+2017-07-28 16:01:13,857 - utils - INFO - Saving centroids, assignments, figure
+2017-07-28 16:01:14,122 - utils - INFO - Centroid 0: 4 series
+2017-07-28 16:01:14,122 - utils - INFO - Centroid 1: 1 series
+2017-07-28 16:01:14,122 - utils - INFO - Centroid 2: 1 series
+2017-07-28 16:01:14,122 - utils - INFO - Centroid 3: 4 series
+2017-07-28 16:01:14,123 - utils - INFO - CLUSTERING TIME SERIES
+2017-07-28 16:01:14,123 - utils - INFO - K-medoids clustering: k=5, it=100
+2017-07-28 16:01:14,123 - utils - INFO - Saving centroids, assignments, figure
+2017-07-28 16:01:14,391 - utils - INFO - Centroid 0: 4 series
+2017-07-28 16:01:14,391 - utils - INFO - Centroid 1: 1 series
+2017-07-28 16:01:14,391 - utils - INFO - Centroid 2: 3 series
+2017-07-28 16:01:14,391 - utils - INFO - Centroid 3: 1 series
+2017-07-28 16:01:14,391 - utils - INFO - Centroid 4: 1 series
+2017-07-28 16:01:14,391 - utils - INFO - CLUSTERING TIME SERIES
+2017-07-28 16:01:14,391 - utils - INFO - K-medoids clustering: k=6, it=100
+2017-07-28 16:01:14,392 - utils - INFO - Saving centroids, assignments, figure
+2017-07-28 16:01:14,666 - utils - INFO - Centroid 0: 3 series
+2017-07-28 16:01:14,666 - utils - INFO - Centroid 1: 1 series
+2017-07-28 16:01:14,666 - utils - INFO - Centroid 2: 1 series
+2017-07-28 16:01:14,667 - utils - INFO - Centroid 3: 3 series
+2017-07-28 16:01:14,667 - utils - INFO - Centroid 4: 1 series
+2017-07-28 16:01:14,667 - utils - INFO - Centroid 5: 1 series
+2017-07-28 16:01:14,667 - utils - INFO - CLUSTERING TIME SERIES
+2017-07-28 16:01:14,667 - utils - INFO - K-medoids clustering: k=7, it=100
+2017-07-28 16:01:14,667 - utils - INFO - Saving centroids, assignments, figure
+2017-07-28 16:01:14,962 - utils - INFO - Centroid 0: 4 series
+2017-07-28 16:01:14,962 - utils - INFO - Centroid 1: 1 series
+2017-07-28 16:01:14,963 - utils - INFO - Centroid 2: 1 series
+2017-07-28 16:01:14,963 - utils - INFO - Centroid 3: 1 series
+2017-07-28 16:01:14,963 - utils - INFO - Centroid 4: 1 series
+2017-07-28 16:01:14,963 - utils - INFO - Centroid 5: 1 series
+2017-07-28 16:01:14,963 - utils - INFO - Centroid 6: 1 series
+2017-07-28 16:01:14,963 - utils - INFO - CLUSTERING TIME SERIES
+2017-07-28 16:01:14,964 - utils - INFO - K-medoids clustering: k=8, it=100
+2017-07-28 16:01:14,965 - utils - INFO - Saving centroids, assignments, figure
+2017-07-28 16:01:15,288 - utils - INFO - Centroid 0: 1 series
+2017-07-28 16:01:15,288 - utils - INFO - Centroid 1: 1 series
+2017-07-28 16:01:15,288 - utils - INFO - Centroid 2: 1 series
+2017-07-28 16:01:15,289 - utils - INFO - Centroid 3: 1 series
+2017-07-28 16:01:15,289 - utils - INFO - Centroid 4: 1 series
+2017-07-28 16:01:15,289 - utils - INFO - Centroid 5: 3 series
+2017-07-28 16:01:15,289 - utils - INFO - Centroid 6: 1 series
+2017-07-28 16:01:15,289 - utils - INFO - Centroid 7: 1 series
+2017-07-28 16:01:15,289 - utils - INFO - CLUSTERING TIME SERIES
+2017-07-28 16:01:15,289 - utils - INFO - K-medoids clustering: k=9, it=100
+2017-07-28 16:01:15,290 - utils - INFO - Saving centroids, assignments, figure
+2017-07-28 16:01:15,581 - utils - INFO - Centroid 0: 2 series
+2017-07-28 16:01:15,581 - utils - INFO - Centroid 1: 1 series
+2017-07-28 16:01:15,581 - utils - INFO - Centroid 2: 1 series
+2017-07-28 16:01:15,582 - utils - INFO - Centroid 3: 1 series
+2017-07-28 16:01:15,582 - utils - INFO - Centroid 4: 1 series
+2017-07-28 16:01:15,582 - utils - INFO - Centroid 5: 1 series
+2017-07-28 16:01:15,582 - utils - INFO - Centroid 6: 1 series
+2017-07-28 16:01:15,582 - utils - INFO - Centroid 7: 1 series
+2017-07-28 16:01:15,582 - utils - INFO - Centroid 8: 1 series
+2017-07-28 16:01:15,582 - utils - INFO - CLUSTERING TIME SERIES
+2017-07-28 16:01:15,582 - utils - INFO - K-medoids clustering: k=10, it=100
+2017-07-28 16:01:15,583 - utils - INFO - Saving centroids, assignments, figure
+2017-07-28 16:01:15,905 - utils - INFO - Centroid 0: 1 series
+2017-07-28 16:01:15,905 - utils - INFO - Centroid 1: 1 series
+2017-07-28 16:01:15,905 - utils - INFO - Centroid 2: 1 series
+2017-07-28 16:01:15,905 - utils - INFO - Centroid 3: 1 series
+2017-07-28 16:01:15,906 - utils - INFO - Centroid 4: 1 series
+2017-07-28 16:01:15,906 - utils - INFO - Centroid 5: 1 series
+2017-07-28 16:01:15,906 - utils - INFO - Centroid 6: 1 series
+2017-07-28 16:01:15,906 - utils - INFO - Centroid 7: 1 series
+2017-07-28 16:01:15,906 - utils - INFO - Centroid 8: 1 series
+2017-07-28 16:01:15,906 - utils - INFO - Centroid 9: 1 series
+2017-07-28 16:08:22,001 - utils - INFO - PREPARING TIME SERIES
+2017-07-28 16:08:22,001 - utils - INFO - Loading data from: test_ts_data.pkl
+2017-07-28 16:08:22,002 - utils - INFO - Smoothing each time series with w==10
+2017-07-28 16:08:22,003 - utils - INFO - Downsampling at a ratio of 1
+2017-07-28 16:08:22,003 - utils - INFO - Processed time series data has shape: (10, 100)
+2017-07-28 16:08:22,003 - utils - INFO - Saving processed time series data
+2017-07-28 16:08:27,396 - utils - INFO - Trying to load time series data
+2017-07-28 16:08:27,396 - utils - INFO - COMPUTING DTW DISTANCE MATRIX
+2017-07-28 16:08:27,430 - utils - INFO - Saving DTW-based distance matrix
+2017-07-28 16:08:51,493 - utils - INFO - Trying to load time series data
+2017-07-28 16:08:51,493 - utils - INFO - Trying to load DTW-based distance matrix
+2017-07-28 16:08:51,494 - utils - INFO - CLUSTERING TIME SERIES
+2017-07-28 16:08:51,494 - utils - INFO - K-medoids clustering: k=2, it=100
+2017-07-28 16:08:51,494 - utils - INFO - Saving centroids, assignments, figure
+2017-07-28 16:08:51,799 - utils - INFO - Centroid 0: 5 series
+2017-07-28 16:08:51,799 - utils - INFO - Centroid 1: 5 series
+2017-07-28 16:08:51,799 - utils - INFO - CLUSTERING TIME SERIES
+2017-07-28 16:08:51,799 - utils - INFO - K-medoids clustering: k=3, it=100
+2017-07-28 16:08:51,800 - utils - INFO - Saving centroids, assignments, figure
+2017-07-28 16:08:52,074 - utils - INFO - Centroid 0: 5 series
+2017-07-28 16:08:52,075 - utils - INFO - Centroid 1: 4 series
+2017-07-28 16:08:52,075 - utils - INFO - Centroid 2: 1 series
+2017-07-28 16:08:52,075 - utils - INFO - CLUSTERING TIME SERIES
+2017-07-28 16:08:52,075 - utils - INFO - K-medoids clustering: k=4, it=100
+2017-07-28 16:08:52,075 - utils - INFO - Saving centroids, assignments, figure
+2017-07-28 16:08:52,354 - utils - INFO - Centroid 0: 1 series
+2017-07-28 16:08:52,354 - utils - INFO - Centroid 1: 3 series
+2017-07-28 16:08:52,354 - utils - INFO - Centroid 2: 1 series
+2017-07-28 16:08:52,354 - utils - INFO - Centroid 3: 5 series
+2017-07-28 16:08:52,354 - utils - INFO - CLUSTERING TIME SERIES
+2017-07-28 16:08:52,354 - utils - INFO - K-medoids clustering: k=5, it=100
+2017-07-28 16:08:52,355 - utils - INFO - Saving centroids, assignments, figure
+2017-07-28 16:08:52,649 - utils - INFO - Centroid 0: 3 series
+2017-07-28 16:08:52,650 - utils - INFO - Centroid 1: 1 series
+2017-07-28 16:08:52,650 - utils - INFO - Centroid 2: 1 series
+2017-07-28 16:08:52,650 - utils - INFO - Centroid 3: 4 series
+2017-07-28 16:08:52,650 - utils - INFO - Centroid 4: 1 series
+2017-07-28 16:08:52,650 - utils - INFO - CLUSTERING TIME SERIES
+2017-07-28 16:08:52,650 - utils - INFO - K-medoids clustering: k=6, it=100
+2017-07-28 16:08:52,651 - utils - INFO - Saving centroids, assignments, figure
+2017-07-28 16:08:52,964 - utils - INFO - Centroid 0: 1 series
+2017-07-28 16:08:52,964 - utils - INFO - Centroid 1: 3 series
+2017-07-28 16:08:52,964 - utils - INFO - Centroid 2: 1 series
+2017-07-28 16:08:52,964 - utils - INFO - Centroid 3: 3 series
+2017-07-28 16:08:52,964 - utils - INFO - Centroid 4: 1 series
+2017-07-28 16:08:52,964 - utils - INFO - Centroid 5: 1 series
+2017-07-28 16:08:52,964 - utils - INFO - CLUSTERING TIME SERIES
+2017-07-28 16:08:52,964 - utils - INFO - K-medoids clustering: k=7, it=100
+2017-07-28 16:08:52,965 - utils - INFO - Saving centroids, assignments, figure
+2017-07-28 16:08:53,269 - utils - INFO - Centroid 0: 1 series
+2017-07-28 16:08:53,270 - utils - INFO - Centroid 1: 3 series
+2017-07-28 16:08:53,270 - utils - INFO - Centroid 2: 1 series
+2017-07-28 16:08:53,270 - utils - INFO - Centroid 3: 2 series
+2017-07-28 16:08:53,270 - utils - INFO - Centroid 4: 1 series
+2017-07-28 16:08:53,270 - utils - INFO - Centroid 5: 1 series
+2017-07-28 16:08:53,270 - utils - INFO - Centroid 6: 1 series
+2017-07-28 16:08:53,270 - utils - INFO - CLUSTERING TIME SERIES
+2017-07-28 16:08:53,270 - utils - INFO - K-medoids clustering: k=8, it=100
+2017-07-28 16:08:53,271 - utils - INFO - Saving centroids, assignments, figure
+2017-07-28 16:08:53,684 - utils - INFO - Centroid 0: 2 series
+2017-07-28 16:08:53,684 - utils - INFO - Centroid 1: 1 series
+2017-07-28 16:08:53,684 - utils - INFO - Centroid 2: 1 series
+2017-07-28 16:08:53,684 - utils - INFO - Centroid 3: 1 series
+2017-07-28 16:08:53,684 - utils - INFO - Centroid 4: 2 series
+2017-07-28 16:08:53,685 - utils - INFO - Centroid 5: 1 series
+2017-07-28 16:08:53,685 - utils - INFO - Centroid 6: 1 series
+2017-07-28 16:08:53,685 - utils - INFO - Centroid 7: 1 series
+2017-07-28 16:08:53,685 - utils - INFO - CLUSTERING TIME SERIES
+2017-07-28 16:08:53,685 - utils - INFO - K-medoids clustering: k=9, it=100
+2017-07-28 16:08:53,686 - utils - INFO - Saving centroids, assignments, figure
+2017-07-28 16:08:54,119 - utils - INFO - Centroid 0: 1 series
+2017-07-28 16:08:54,119 - utils - INFO - Centroid 1: 1 series
+2017-07-28 16:08:54,119 - utils - INFO - Centroid 2: 1 series
+2017-07-28 16:08:54,119 - utils - INFO - Centroid 3: 1 series
+2017-07-28 16:08:54,120 - utils - INFO - Centroid 4: 1 series
+2017-07-28 16:08:54,120 - utils - INFO - Centroid 5: 2 series
+2017-07-28 16:08:54,120 - utils - INFO - Centroid 6: 1 series
+2017-07-28 16:08:54,120 - utils - INFO - Centroid 7: 1 series
+2017-07-28 16:08:54,120 - utils - INFO - Centroid 8: 1 series
+2017-07-28 16:08:54,120 - utils - INFO - CLUSTERING TIME SERIES
+2017-07-28 16:08:54,120 - utils - INFO - K-medoids clustering: k=10, it=100
+2017-07-28 16:08:54,121 - utils - INFO - Saving centroids, assignments, figure
+2017-07-28 16:08:54,467 - utils - INFO - Centroid 0: 1 series
+2017-07-28 16:08:54,467 - utils - INFO - Centroid 1: 1 series
+2017-07-28 16:08:54,467 - utils - INFO - Centroid 2: 1 series
+2017-07-28 16:08:54,467 - utils - INFO - Centroid 3: 1 series
+2017-07-28 16:08:54,467 - utils - INFO - Centroid 4: 1 series
+2017-07-28 16:08:54,467 - utils - INFO - Centroid 5: 1 series
+2017-07-28 16:08:54,467 - utils - INFO - Centroid 6: 1 series
+2017-07-28 16:08:54,467 - utils - INFO - Centroid 7: 1 series
+2017-07-28 16:08:54,467 - utils - INFO - Centroid 8: 1 series
+2017-07-28 16:08:54,468 - utils - INFO - Centroid 9: 1 series
+2017-07-28 16:09:00,291 - utils - INFO - CREATING ELBOW PLOT
+2017-07-28 16:09:00,291 - utils - INFO - k: 2, error: 0.0229190243981
+2017-07-28 16:09:00,291 - utils - INFO - k: 3, error: 0.0204845622508
+2017-07-28 16:09:00,292 - utils - INFO - k: 4, error: 0.0108817237597
+2017-07-28 16:09:00,292 - utils - INFO - k: 5, error: 0.00925110372841
+2017-07-28 16:09:00,292 - utils - INFO - k: 6, error: 0.00862140090445
+2017-07-28 16:09:00,292 - utils - INFO - k: 7, error: 0.00365657125936
+2017-07-28 16:09:00,293 - utils - INFO - k: 8, error: 0.000366177493471
+2017-07-28 16:09:00,293 - utils - INFO - k: 9, error: 0.00473657090393
+2017-07-28 16:09:00,293 - utils - INFO - k: 10, error: 0.0
