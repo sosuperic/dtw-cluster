@@ -22,6 +22,7 @@ import matplotlib.pylab as plt
 plt.style.use('ggplot')
 import numpy as np
 import os
+import scipy.interpolate as interp
 import sys
 
 from utils import setup_logging
@@ -44,29 +45,44 @@ class ClusterAnalysis(object):
     ####################################################################################################################
     # Utils
     ####################################################################################################################
-    def make_fake_data(self, n=10, l=100):
+    def gen_fake_timeseries(self, n, l, fn='sin'):
+        # Create fake time series data of dimension [n,l]
+        # Noisy sin waves and cos waves
+        ts_data = np.zeros([n, l])
+        for i in range(n):
+            y_vals = []
+            for x in np.linspace(0, 2 * math.pi, l):
+                noise = np.random.normal(0, 0.25)
+                y_val = eval('np.' + fn + '(x + noise)')
+                y_vals.append(y_val)
+            ts_data[i, :] = np.array(y_vals)
+        return ts_data
+
+    def make_fake_data_same_lengths(self, n=10, l=100):
         """
         Test by on synthetic data composed of sin and cos waves. n time series, each of length l
         """
-        def gen_fake_data(n, l, fn='sin'):
-            # Create fake time series data of dimension [n,l]
-            # Noisy sin waves and cos waves
-            ts_data = np.zeros([n, l])
-            for i in range(n):
-                y_vals = []
-                for x in np.linspace(0, 2 * math.pi, l):
-                    noise = np.random.normal(0,0.25)
-                    y_val = eval('np.' + fn + '(x + noise)')
-                    y_vals.append(y_val)
-                ts_data[i, :] = np.array(y_vals)
-            return ts_data
-
         self.logger.info('Testing with n={}, l={}'.format(n, l))
         # Make fake data
-        ts_data_sin = gen_fake_data(n/2, l, fn='sin')
-        ts_data_cos = gen_fake_data(n/2, l, fn='cos')
+        ts_data_sin = self.gen_fake_timeseries(n/2, l, fn='sin')
+        ts_data_cos = self.gen_fake_timeseries(n/2, l, fn='cos')
         ts_data = np.vstack([ts_data_sin, ts_data_cos])
-        pickle.dump(ts_data, open('test_ts_data.pkl', 'wb'), protocol=2)
+        pickle.dump(ts_data, open('test_ts_data_matrix.pkl', 'w'), protocol=2)
+
+    def make_fake_data_diff_lengths(self, n=10, min_l=50, max_l=100):
+        """
+        Test by on synthetic data composed of sin and cos waves. n time series, each of different lengths
+        """
+        self.logger.info('Testing with n={}, min_l={}, max_l'.format(n, min_l, max_l))
+
+        ts_data = []
+        for i in range(n):
+            series_len = np.random.randint(min_l, max_l)
+            ts_data_sin = np.squeeze(self.gen_fake_timeseries(1, series_len, fn='sin'))
+            ts_data_cos = np.squeeze(self.gen_fake_timeseries(1, series_len, fn='cos'))
+            ts_data.append(ts_data_sin)
+            ts_data.append(ts_data_cos)
+        pickle.dump(ts_data, open('test_ts_data_list.pkl', 'w'), protocol=2)
 
     ####################################################################################################################
     # 1) Preprocess data
@@ -77,7 +93,9 @@ class ClusterAnalysis(object):
 
         Parameters
         ----------
-        ts_data_path: str, path to pkl file with data matrix [num_timeseries, len]
+        ts_data_path: str, path to pkl file with either:
+            data matrix [num_timeseries, len]
+            list of time series
         w: float or int, window size to use for smoothing
             - if float, w is ratio of window size to len
             - if int, w is window size
@@ -91,6 +109,21 @@ class ClusterAnalysis(object):
 
         self.logger.info('Loading data from: {}'.format(ts_data_path))
         ts_data = pickle.load(open(ts_data_path, 'rb'))
+
+        # Make all timeseries the same length
+        if type(ts_data) == list:
+            max_len = max([len(ts) for ts in ts_data])
+            self.logger.info('Interpolating each series to longest series length: max_len={}'.format(max_len))
+            for i, s in enumerate(ts_data):
+                if len(s) == max_len:
+                    continue
+                else:
+                    s_interp = interp.interp1d(np.arange(s.size), s)
+                    s_stretch = s_interp(np.linspace(0, s.size - 1, max_len))
+                    ts_data[i] = s_stretch
+
+            # Convert into numpy
+            ts_data = np.array(ts_data)  # (num_timeseries, max_len)
 
         # Smooth
         if w:
@@ -350,7 +383,8 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Cluster time series')
 
     # Action to take
-    parser.add_argument('--make_fake_data', dest='make_fake_data', action='store_true')
+    parser.add_argument('--make_fake_data_same_lengths', dest='make_fake_data_same_lengths', action='store_true')
+    parser.add_argument('--make_fake_data_diff_lengths', dest='make_fake_data_diff_lengths', action='store_true')
     parser.add_argument('--prepare_ts', dest='prepare_ts', action='store_true')
     parser.add_argument('--compute_dtw_dist_matrix', dest='compute_dtw_dist_matrix', action='store_true')
     parser.add_argument('--cluster_ts', dest='cluster_ts', action='store_true')
@@ -380,8 +414,11 @@ if __name__ == '__main__':
     analysis = ClusterAnalysis()
 
     # Take action
-    if cmdline.make_fake_data:
-        analysis.make_fake_data(n=10, l=100)
+    if cmdline.make_fake_data_same_lengths:
+        analysis.make_fake_data_same_lengths(n=50, l=100)
+
+    if cmdline.make_fake_data_diff_lengths:
+        analysis.make_fake_data_diff_lengths(n=50, min_l=50, max_l=100)
 
     elif cmdline.prepare_ts:
         ts_data = analysis.prepare_ts(cmdline.data_path, cmdline.w, cmdline.ds)
