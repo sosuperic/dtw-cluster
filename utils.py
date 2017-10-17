@@ -1,4 +1,11 @@
-# Basic utils unrelated to clustering
+# utils.py
+
+"""
+Basic utils unrelated to clustering
+
+Available function:
+- setup_logging: Setup logging configuration
+"""
 
 import json
 import logging.config

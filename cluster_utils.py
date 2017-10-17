@@ -1,4 +1,15 @@
-# Cluster related functions and classes
+# cluster_utils.py
+
+"""
+Cluster related functions and classes
+
+Available classes:
+- TSCluster
+
+Available functions:
+- LB_Keogh(s1, s2, r): Calculate LB_Keogh lower bound to dynamic time warping.
+- smooth(x, window_len, window): Smooth array x by convolving with filter (e.g. hanning function)
+"""
 
 from collections import defaultdict
 import numpy as np
@@ -91,7 +102,7 @@ class TSCluster(object):
 
         # Even though whole point of medoids is to avoid Euclidean mean-based centroids, I think it is still
         # nice to show the 'mean' of the curves of one cluster for kmedoids to produce smoother representations
-        # of each curve
+        # of each curve. Plus, the pathological example doesn't apply if the cluster does indeed contain similar shapes.
         self.centroids = []
         for c in C:
             cur_centroid = np.zeros(data.shape[1])

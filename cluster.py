@@ -1,9 +1,16 @@
-# Cluster
-# Four main steps:
-# 1) Preprocess / prepare data
-# 2) Compute DTW distance matrix on preprocessed data
-# 3) Use distance matrix to cluster
-# 4) Create elbow plot
+# cluster.py
+
+"""
+Cluster
+Four main steps:
+1) Preprocess / prepare data
+2) Compute DTW distance matrix on preprocessed data
+3) Use distance matrix to cluster
+4) Create elbow plot
+
+Available classes:
+- ClusterAnalsyis
+"""
 
 import argparse
 from concurrent.futures import ProcessPoolExecutor, wait
@@ -290,7 +297,7 @@ class ClusterAnalysis(object):
     ####################################################################################################################
     def compute_kclust_error(self, alg, n, w, ds, r, k, it):
         """
-        
+        Calculate coherence of each cluster for each k. Return dictionary from k to error.
         
         Params
         ------
@@ -323,6 +330,9 @@ class ClusterAnalysis(object):
         return k2error
 
     def save_kclust_error(self, k2error, alg, n, w, ds, r, k, it):
+        """
+        Use k2error to save elbow plot
+        """
         params_str = KCLUST_STR.format(n, w, ds, r, k, it)
         data_out_path = os.path.join(OUTPUTS_PATH, 'data', '{}-error_{}.pkl'.format(alg, params_str))
         with open(data_out_path, 'wb') as f:
